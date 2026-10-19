@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Caixa Firme</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="top-row">
+      <div class="brand">
+        <div class="mark" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 15l4-5 3 3 6-8"/><path d="M12 5h4v4"/></svg></div>
+        <div><h1>Caixa Firme</h1><small>Financeiro da empresa</small></div>
+      </div>
+      <div class="controls">
+        <div class="period">
+          <label for="f-mes">Período</label>
+          <select id="f-mes" aria-label="Mês"></select>
+          <select id="f-ano" aria-label="Ano"></select>
+        </div>
+        <button class="btn btn-ghost" id="btn-tema" type="button" aria-label="Alternar tema"></button>
+        <button class="btn btn-primary" id="btn-novo" type="button"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3v10M3 8h10"/></svg><span class="btn-label">Novo lançamento</span></button>
+      </div>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="Seções">
+      <button class="tab" role="tab" data-tab="painel">Painel</button>
+      <button class="tab" role="tab" data-tab="lancamentos">Lançamentos</button>
+      <button class="tab" role="tab" data-tab="pagar">Contas a pagar <span class="badge" id="bdg-pagar"></span></button>
+      <button class="tab" role="tab" data-tab="receber">Contas a receber <span class="badge" id="bdg-receber"></span></button>
+      <button class="tab" role="tab" data-tab="relatorios">Relatórios</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="main">
+  <div id="banner"></div>
+  <section id="view"></section>
+  <p class="status-note" id="status-note"></p>
+</main>
+
+<div id="modal-root"></div>
+<div class="toast" id="toast" hidden></div>
+
+<script src="script.js"></script>
+</body>
+</html>
